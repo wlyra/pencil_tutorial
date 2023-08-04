@@ -49,7 +49,7 @@ This will populate the `src/` directory with soft links. Now do
 
 		pc_build
  
-this command will compile the code and produce the `*.x` executables in the `src/` directory. The compilation should take about 5 minutes. 
+this command will compile the code and produce the `*.x` executables in the `src/` directory. The compilation should take about 5 minutes. (If you need to clean and build again, do `pc_build --cleanall`)
 
 Once the compilation is done, create a data directory 
 
