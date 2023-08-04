@@ -10,7 +10,6 @@ Run now the following script.
 
 ```
 import matplotlib
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 import math
@@ -20,11 +19,6 @@ import os
 istride = 10
 
 path = "videos"
-exists = os.path.exists(path)
-if not exists:
-    os.mkdir(path)
-
-path = "videos/yVSx_stream"
 exists = os.path.exists(path)
 if not exists:
     os.mkdir(path)
@@ -67,9 +61,12 @@ for i in np.arange(0,len(t),istride):
     rhoi = rhopxz[i,:,:]
 
     im=plt.imshow(rhoi.T,extent=(min(x),max(x),min(z),max(z)),vmin=linmin,vmax=linmax,cmap='inferno')
-    print(f"Saving videos/yVSx_stream/{i:05}.png")
-    plt.savefig(f"videos/yVSx_stream/{i:05}.png",bbox_inches="tight")
+    print(f"Saving videos/{i:05}.png")
+    plt.savefig(f"videos/{i:05}.png",bbox_inches="tight")
     plt.close()
 
 ```
 
+navigate to the video folder and do 
+
+		ffmpeg -framerate 16 -pattern_type glob -i '*.png' -c:v libx264 -vf "fps=16,format=yuv420p,pad=ceil(iw/2)*2:ceil(ih/2)*2" movie.mp4
