@@ -1,4 +1,14 @@
-Now let us visualize the results. Let's read the time series and plot the maximum dust density vs time. For that, you need to ssh into rusty via "ssh -Y rusty" after getting on the login
+Now let us visualize the results. Let's read the time series and plot the maximum dust density vs time. For that, you need to ssh into rusty via "ssh -Y rusty" after getting on the login to enable the X window. 
+
+A parenthetical comment. On the terminal, the PYTHONPATH variable sets the path to python. On the notebooks of https://jupyter.flatironinstitute.org/, you'll need the following lines
+
+```
+import sys
+sys.path.insert(0, "/my/home/dir/pencil-code/python")
+```
+
+where /my/home/dir is your path to home. End of parenthetical comment. 
+
 
 ```
 import matplotlib
