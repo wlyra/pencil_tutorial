@@ -2,10 +2,19 @@
 
 ## Setting up your rusty environment for Pencil
 
-Pencil is written in Fortran90/2003, with some auxiliary C-code. You'll need both a Fortran and a C compiler. Load both with 
-
-	module load openmpi
-        
-Next git clone the pencil code on your home directory
+Obtain the pencil code by git cloning into your home directory
 
 	git clone https://github.com/pencil-code/pencil-code.git
+
+Next go to the pencil-code directory, and execute the sourceme.sh 
+
+	cd ~/pencil-code
+	source sourceme.sh
+
+Next add these lines to your ~/.bash_profile
+
+	export PENCIL_HOME=~/pencil-code
+	export PENCIL_CONFIG_FILES=$PENCIL_HOME/config/hosts/rusty/rusty.conf
+	PATH=$PENCIL_HOME/bin:$PENCIL_HOME/utils:"${PATH}"
+	module load openmpi
+
