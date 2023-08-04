@@ -1,8 +1,10 @@
-Now let us visualize the results. Let's read the time series and plot the maximum dust density vs time 
+Now let us visualize the results. Let's read the time series and plot the maximum dust density vs time. For that, you need to ssh into rusty via "ssh -Y rusty" after getting on the login
 
 ```
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
 import pencil as pc
-import pylab as plt 
 import numpy as np
 
 ts=pc.read.ts()
@@ -22,8 +24,10 @@ This should be the result. The abscissa is in orbital periods, the ordinate is m
 Now let us inspect the a contour plot of the dust density. 
 
 ```
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
 import pencil as pc
-import pylab as plt 
 import numpy as np
 
 ff=pc.read.var(trimall=True)
