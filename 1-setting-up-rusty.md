@@ -15,7 +15,7 @@ Next add these lines to your ~/.bash_profile
 
 		export PENCIL_HOME=~/pencil-code
 		export PENCIL_CONFIG_FILES=$PENCIL_HOME/config/hosts/rusty/rusty.conf
-		PATH=$PENCIL_HOME/bin:$PENCIL_HOME/utils:"${PATH}"
+		export PATH="$PENCIL_HOME/bin:$PENCIL_HOME/utils:$PATH"
 		export PYTHONPATH="$PENCIL_HOME/python:$PYTHONPATH"
 		module load openmpi
 		module load python3        
