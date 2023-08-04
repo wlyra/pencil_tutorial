@@ -44,9 +44,26 @@ This will populate the `src/` directory with soft links. Now do
 
 		pc_build
  
-this command will compile the code and produce the `*.x` executables in the `src/` directory. Once the compilation is done, create a data directory 
+this command will compile the code and produce the `*.x` executables in the `src/` directory. The compilation should take about 5 minutes. 
+
+Once the compilation is done, create a data directory 
 
 		pc_mkdatadir
 
 Which is a shortcut pencil command for creating a data directory. In this case, it will simply creat a hardlink data/ subdirectory (in other clusters you may want to configure pc_mkdatadir to generate a softlink data/ subdirectory, linked to the /scratch or /work level of the cluster).
 
+Now send the run to the cluster. This batch script should suffice 
+
+		#!/bin/bash
+		#SBATCH -J streaming      # job name
+		#SBATCH -o streaming.o%j  # output and error file name (%j expands to jobID)
+		#SBATCH -e streaming.e%j  # output and error file name (%j expands to jobID)
+		#SBATCH -N 1              # total number of nodes requested
+		#SBATCH -n 16             # total number of mpi tasks requested
+		#SBATCH -p temp           # queue (partition) -- normal, development, etc.
+		#SBATCH -t 00:30:00       # run time (hh:mm:ss) - 30 minutes
+		              
+		pc_start
+		pc_run
+
+The run should be fast, running one orbit every 5 minutes, approximately. `tail -F` the `streaming.o%j` file (substitute `%j` by the jobID) to monitor the evolution of the run.
