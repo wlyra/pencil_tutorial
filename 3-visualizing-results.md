@@ -6,6 +6,7 @@ Now let us visualize the results. Let's read the time series and plot the maximu
 
 		ts=pc.read.ts()
 		plt.plot(ts.t/2/np.pi,ts.rhopmax)
+
 		plt.xlabel(r'$t/T_0$')
 		plt.ylabel(r'max($\rho_p$)/$\rho_0$')
 		plt.yscale('log')
