@@ -1,21 +1,30 @@
-Now let us visualize the results. Let's read the time series and plot the maximum dust density vs time. For that, you need to ssh into rusty via "ssh -Y rusty" after getting on the login to enable the X window. 
+Now let us visualize the results. Let's read the time series and plot the maximum dust density vs time. 
 
 A parenthetical comment. On the terminal, the PYTHONPATH variable sets the path to python. On the notebooks of https://jupyter.flatironinstitute.org/, you'll need the following lines
 
+If from jupyter notebook
 ```
 import sys
 sys.path.insert(0, "/my/home/dir/pencil-code/python")
 ```
 
-where /my/home/dir is your path to home. End of parenthetical comment. 
+where `/my/home/dir` is your path to home. 
 
+Conversely, if you are using python from the terminal, you will need to `ssh` into rusty via `ssh -Y rusty` after getting on the login to enable the X window. You will also need the following lines on the script 
+
+If from terminal
 
 ```
 import matplotlib
 matplotlib.use('TkAgg')
-import matplotlib.pyplot as plt
+```
+
+The rest is the same for either jupyter notebook or terminal prompt
+
+```
 import pencil as pc
 import numpy as np
+import matplotlib.pyplot as plt
 
 ts=pc.read.ts()
 plt.plot(ts.t/2/np.pi,ts.rhopmax)
@@ -34,11 +43,9 @@ This should be the result. The abscissa is in orbital periods, the ordinate is m
 Now let us inspect the a contour plot of the dust density. 
 
 ```
-import matplotlib
-matplotlib.use('TkAgg')
-import matplotlib.pyplot as plt
 import pencil as pc
 import numpy as np
+import matplotlib.pyplot as plt
 
 ff=pc.read.var(trimall=True)
 rhop = ff.rhop[:,0,:]
