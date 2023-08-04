@@ -70,4 +70,5 @@ for i in np.arange(0,len(t),istride):
 
 navigate to the video folder and do 
 
+		module load ffmpeg
 		ffmpeg -framerate 16 -pattern_type glob -i '*.png' -c:v libx264 -vf "fps=16,format=yuv420p,pad=ceil(iw/2)*2:ceil(ih/2)*2" movie.mp4
