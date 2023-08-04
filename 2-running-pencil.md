@@ -35,6 +35,7 @@ And in `run.in`, let us change
 		nt = 10000000, it1 = 25
 		lpencil_check=F
 		itorder = 3
+		dvid=0.1
 
 Finally         
                 
@@ -66,4 +67,4 @@ Now send the run to the cluster. This batch script should suffice
 		pc_start
 		pc_run
 
-The run should be fast, running one orbit every 5 minutes, approximately. `tail -F` the `streaming.o%j` file (substitute `%j` by the jobID) to monitor the evolution of the run.
+The run should be fast, running one orbit every few minutes. `tail -F` the `streaming.o%j` file (substitute `%j` by the jobID) to monitor the evolution of the run.
