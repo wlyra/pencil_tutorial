@@ -11,6 +11,8 @@ Now let us visualize the results. Let's read the time series and plot the maximu
 		plt.ylabel(r'max($\rho_p$)/$\rho_0$')
 		plt.yscale('log')
 		plt.title("Maximum Dust Density vs Time")
-		plt.savefig("maxdust.png")
+		plt.show()
 
-<img src="maxdust.png" alt="maxdust" width="200"/>
+This should be the result
+
+<img src="maxdust.png" alt="maxdust" width="400"/>
