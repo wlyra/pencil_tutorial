@@ -32,18 +32,18 @@ The -C is for cleaning leftover files from previous compilations. The dot says t
 
 You should see 
 
-		[me@rusty globaldisc]$ pc_auto-test -C . 
-		
-		/mnt/home/me/pencil-code/samples/2d-tests/globaldisc:
-		    Compiling..                               ok      
-		    Starting..                                ok      
-		    Running..                                 ok      
-		    Validating results..                      ok      
-		
-		----------------------------------------------------------------------
-		Test succeeded.
-		
-		----------------------------------------------------------------------
+	[me@rusty globaldisc]$ pc_auto-test -C . 
+	
+	/mnt/home/me/pencil-code/samples/2d-tests/globaldisc:
+	    Compiling..                               ok      
+	    Starting..                                ok      
+	    Running..                                 ok      
+	    Validating results..                      ok      
+	
+	----------------------------------------------------------------------
+	Test succeeded.
+	
+	----------------------------------------------------------------------
 
 
 
