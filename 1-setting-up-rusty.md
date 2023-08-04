@@ -44,9 +44,3 @@ You should see
 	Test succeeded.
 	
 	----------------------------------------------------------------------
-
-
-
-
-
-Do not forget the dot! 
