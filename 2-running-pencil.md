@@ -37,6 +37,10 @@ And in `run.in`, let us change
 		itorder = 3
 		dvid=0.1
 
+For outputing slices for videos, create a video.in file with the quantity to do slices. 
+
+		echo "rhop" >> video.in
+
 Finally         
                 
 		pc_setupsrc
