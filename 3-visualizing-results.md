@@ -13,4 +13,4 @@ Now let us visualize the results. Let's read the time series and plot the maximu
 		plt.title("Maximum Dust Density vs Time")
 		plt.savefig("maxdust.png")
 
-<img src="maxdust.jpg" alt="maxdust" width="200"/>
+<img src="maxdust.png" alt="maxdust" width="200"/>
