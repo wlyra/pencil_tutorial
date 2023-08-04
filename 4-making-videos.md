@@ -59,7 +59,8 @@ for i in np.arange(0,len(t),istride):
 
     # Choose timeindex of plot                                                                        
     rhoi = rhopxz[i,:,:]
-
+    i = np.where(rhoi < linmin) 
+    rhoi[i] = linmin
     im=plt.imshow(rhoi.T,extent=(min(x),max(x),min(z),max(z)),vmin=linmin,vmax=linmax,cmap='inferno')
     print(f"Saving videos/{i:05}.png")
     plt.savefig(f"videos/{i:05}.png",bbox_inches="tight")
