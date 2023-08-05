@@ -37,7 +37,7 @@ This should be the result. The abscissa is in orbital periods, the ordinate is m
 
 <img src="maxdust.png" alt="maxdust" width="400"/>
 
-Now let us inspect the a contour plot of the dust density. 
+Now let us inspect a contour plot of the dust density. 
 
 ```
 import pencil as pc
