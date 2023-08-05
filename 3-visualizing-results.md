@@ -7,7 +7,7 @@ import sys
 sys.path.insert(0, "/my/home/dir/pencil-code/python")
 ```
 
-where `/my/home/dir` is your path to home. 
+where `/my/home/dir` is your path to home. It needs to be the full path, no shortcuts like ~ for home.
 
 Conversely, if you are using python from the terminal, you will need to `ssh` into rusty via `ssh -Y rusty` after getting on the login to enable the X window. You will also need the following lines on the script 
 
