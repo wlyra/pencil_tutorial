@@ -25,7 +25,10 @@ Next add these lines to your ~/.bash_profile
 		export PATH="$PENCIL_HOME/bin:$PENCIL_HOME/utils:$PATH"
 		export PYTHONPATH="$PENCIL_HOME/python:$PYTHONPATH"
 
-And source it. You should be ready to compile the code. Let's make sure that everything is ok by compiling a test serial run. Jump to 
+And source it. If you downloaded the GNU compiler collection (gcc) yesterday, you should be ready to compile the code.
+Otherwise, download with your favorite package manager (ports, brew, yum, aptitude, etc).
+
+Let's make sure that everything is ok by compiling a test serial run. Jump to 
 
 		cd $PENCIL_HOME/samples/2d-tests/globaldisc/
 
@@ -39,7 +42,7 @@ The -C is for cleaning leftover files from previous compilations. The dot says t
 
 You should see 
 
-	[me@rusty globaldisc]$ pc_auto-test -C . 
+	[@ globaldisc]$ pc_auto-test -C . 
 	
 	/mnt/home/me/pencil-code/samples/2d-tests/globaldisc:
 	    Compiling..                               ok      
