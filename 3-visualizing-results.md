@@ -1,22 +1,5 @@
-Now let us visualize the results. Let's read the time series and plot the maximum dust density vs time. 
-
-A parenthetical comment. On the terminal, the PYTHONPATH variable sets the path to python. On the notebooks of https://jupyter.flatironinstitute.org/, you'll need the following lines
-
-```
-import sys
-sys.path.insert(0, "/my/home/dir/pencil-code/python")
-```
-
-where `/my/home/dir` is your path to home. It needs to be the full path, no shortcuts like ~ for home.
-
-Conversely, if you are using python from the terminal, you will need to `ssh` into rusty via `ssh -Y rusty` after getting on the login to enable the X window. You will also need the following lines on the script 
-
-```
-import matplotlib
-matplotlib.use('TkAgg')
-```
-
-The rest is the same for either jupyter notebook or terminal prompt
+Now let us visualize the results. Let's read the time series and plot
+the maximum dust density vs time. These lines will be the same for either jupyter notebook or terminal prompt
 
 ```
 import pencil as pc

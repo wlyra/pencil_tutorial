@@ -6,11 +6,11 @@ Navigate to the sample
 
 and let's modify the resolution. A pencil code simulation has 5 configuration files that it needs to run a simulation. These are 
 
-	src/Makefile.local
-	src/cparam.local
-	start.in
-	run.in
-	print.in
+	  	src/Makefile.local
+		src/cparam.local
+		start.in
+		run.in
+		print.in
 
 The src/Makefile.local chooses the modules to compile. The src/cparam.local controls the resolution. start.in contains the initial conditions, run.in the run parameters, and print.in the diagnostic quantities to output to the time series. 
 
@@ -36,7 +36,7 @@ In `run.in`, let us change
 
 Add also a video.in file to output the particle density
 
-    	   	echo rhop > video.in
+    	   echo rhop > video.in
 
 Finally         
                 
