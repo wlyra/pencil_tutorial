@@ -68,7 +68,7 @@ for i in np.arange(0,len(t),istride):
 
 ```
 
-Now check if you have the software ffmpeg (which ffmpeg). If you don't have it, install it first. Then navigate to the video folder and do 
+navigate to the video folder and do 
 
+		module load ffmpeg
 		ffmpeg -framerate 16 -pattern_type glob -i '*.png' -c:v libx264 -vf "fps=16,format=yuv420p,pad=ceil(iw/2)*2:ceil(ih/2)*2" movie.mp4
-
