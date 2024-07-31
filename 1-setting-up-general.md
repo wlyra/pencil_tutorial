@@ -25,14 +25,7 @@ Next add these lines to your ~/.bashrc (or ~/.bash_profile if bashrc does not ex
 	export PATH="$PENCIL_HOME/bin:$PENCIL_HOME/utils:$PATH"
 	export PYTHONPATH="$PENCIL_HOME/python:$PYTHONPATH"
 
-And source it. If you downloaded the GNU compiler collection (gcc) yesterday, you should be ready to compile the code. Let's just add optimization so the code runs faster. Add these lines to the end of $PENCIL_HOME/config/compilers/GNU-GCC.conf
-
-	%section Makefile
-		FFLAGS=-O3
-	%endsection Makefile
-
-
-Otherwise, download with your favorite package manager (ports, brew, yum, aptitude, etc).
+And source it. If you downloaded the GNU compiler collection (gcc) yesterday, you should be ready to compile the code. Otherwise, download with your favorite package manager (ports, brew, yum, aptitude, etc).
 
 Let's make sure that everything is ok by compiling a test serial run. Jump to 
 

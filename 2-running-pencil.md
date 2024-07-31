@@ -43,7 +43,15 @@ Finally
                 
 	pc_setupsrc
 
-This will populate the `src/` directory with soft links. Now do 
+This will populate the `src/` directory with soft links. Before
+compiling, let's  add optimization so the code runs faster.
+Add these lines to the end of `$PENCIL_HOME/config/compilers/GNU-GCC.conf`
+
+	%section Makefile
+		FFLAGS=-O3
+	%endsection Makefile
+
+Now do 
 
 	pc_build
  
