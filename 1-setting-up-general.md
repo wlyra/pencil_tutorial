@@ -8,7 +8,7 @@ Obtain the pencil code by git cloning into your home directory.
 
 Now let's check if your shell is bash.
 
-    	  echo $SHELL
+    echo $SHELL
 
 If the shell is not bash, change it to bash.
 
