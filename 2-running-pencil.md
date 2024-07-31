@@ -25,14 +25,15 @@ Next, we'll modify the resolution. Open `src/cparam.local` and edit the lines
 
 	integer, parameter :: ncpus=1, nprocx=1, nprocy=1, nprocz=1
 	integer, parameter :: nxgrid=128, nygrid=1, nzgrid=128
-	integer, parameter :: npar=20000
+	integer, parameter :: npar=40000
 
 In `run.in`, let us change 
 
 	nt = 10000000, it1 = 25
 	lpencil_check=F
 	itorder = 3
-	dvid=0.1
+	dvid=0.05
+	tmax=100.
 
 Add also a `video.in` file to tell the code to output the particle density
 
