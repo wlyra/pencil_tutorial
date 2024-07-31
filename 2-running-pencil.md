@@ -59,9 +59,7 @@ this command will compile the code and produce the `*.x` executables in the `src
 
 Once the compilation is done, create a data directory 
 
-	pc_mkdatadir
-
-Which is a shortcut pencil command for creating a data directory. In this case, it will simply creat a hardlink `data/` subdirectory. 
+     mkdir data
 
 Now start the run. 
 
