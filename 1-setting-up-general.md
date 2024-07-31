@@ -4,7 +4,7 @@
 
 Obtain the pencil code by git cloning into your home directory.
 
-		git clone https://github.com/pencil-code/pencil-code.git
+	git clone https://github.com/pencil-code/pencil-code.git
 
 Now let's check if your shell is bash.
 
@@ -16,14 +16,14 @@ If the shell is not bash, change it to bash.
 
 Next go to the pencil-code directory, and execute the sourceme.sh 
 
-		cd ~/pencil-code
-		source sourceme.sh
+	cd ~/pencil-code
+	source sourceme.sh
 
 Next add these lines to your ~/.bash_profile
 
-		export PENCIL_HOME=~/pencil-code
-		export PATH="$PENCIL_HOME/bin:$PENCIL_HOME/utils:$PATH"
-		export PYTHONPATH="$PENCIL_HOME/python:$PYTHONPATH"
+	export PENCIL_HOME=~/pencil-code
+	export PATH="$PENCIL_HOME/bin:$PENCIL_HOME/utils:$PATH"
+	export PYTHONPATH="$PENCIL_HOME/python:$PYTHONPATH"
 
 And source it. If you downloaded the GNU compiler collection (gcc) yesterday, you should be ready to compile the code. Let's just add optimization so the code runs faster. Add these lines to the end of $PENCIL_HOME/config/compilers/GNU-GCC.conf
 
@@ -36,11 +36,11 @@ Otherwise, download with your favorite package manager (ports, brew, yum, aptitu
 
 Let's make sure that everything is ok by compiling a test serial run. Jump to 
 
-		cd $PENCIL_HOME/samples/2d-tests/globaldisc/
+	cd $PENCIL_HOME/samples/2d-tests/globaldisc/
 
 We will run an `pc_auto-test`. Auto-test is a pencil command that checks if a run is giving the same results as a reference file. It is also useful to catch compilation errors. This pencil command resides in `pencil-code/bin`. You have this in your `$PATH`, so it should find it. Type
 
-		pc_auto-test -C .
+	pc_auto-test -C .
 
 (Do not forget the dot!)
 
