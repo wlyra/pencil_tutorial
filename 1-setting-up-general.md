@@ -1,6 +1,6 @@
 
 
-## Setting up your rusty environment for Pencil
+## Setting up your environment for Pencil
 
 Obtain the pencil code by git cloning into your home directory.
 

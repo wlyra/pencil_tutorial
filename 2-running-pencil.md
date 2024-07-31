@@ -35,10 +35,6 @@ In `run.in`, let us change
 	dvid=0.05
 	tmax=100.
 
-Add also a `video.in` file to tell the code to output the particle density
-
-	echo rhop > video.in
-
 Finally         
                 
 	pc_setupsrc
