@@ -19,7 +19,7 @@ Next go to the pencil-code directory, and execute the sourceme.sh
 	cd ~/pencil-code
 	source sourceme.sh
 
-Next add these lines to your ~/.bash_profile
+Next add these lines to your ~/.bashrc (or ~/.bash_profile if bashrc does not exist)
 
 	export PENCIL_HOME=~/pencil-code
 	export PATH="$PENCIL_HOME/bin:$PENCIL_HOME/utils:$PATH"
