@@ -2,9 +2,17 @@
 
 ## Setting up your rusty environment for Pencil
 
-Obtain the pencil code by git cloning into your home directory on rusty
+Obtain the pencil code by git cloning into your home directory.
 
 		git clone https://github.com/pencil-code/pencil-code.git
+
+Now let's check if your shell is bash.
+
+    	  	echo $SHELL
+
+If the shell is not bash, change it to bash.
+
+       	     	bash
 
 Next go to the pencil-code directory, and execute the sourceme.sh 
 
@@ -14,11 +22,8 @@ Next go to the pencil-code directory, and execute the sourceme.sh
 Next add these lines to your ~/.bash_profile
 
 		export PENCIL_HOME=~/pencil-code
-		export PENCIL_CONFIG_FILES=$PENCIL_HOME/config/hosts/rusty/rusty.conf
 		export PATH="$PENCIL_HOME/bin:$PENCIL_HOME/utils:$PATH"
 		export PYTHONPATH="$PENCIL_HOME/python:$PYTHONPATH"
-		module load openmpi
-		module load python3        
 
 And source it. You should be ready to compile the code. Let's make sure that everything is ok by compiling a test serial run. Jump to 
 
