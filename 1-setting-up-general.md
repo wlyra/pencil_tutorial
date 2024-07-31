@@ -12,7 +12,7 @@ Now let's check if your shell is bash.
 
 If the shell is not bash, change it to bash.
 
-       	     bash
+       	  bash
 
 Next go to the pencil-code directory, and execute the sourceme.sh 
 
